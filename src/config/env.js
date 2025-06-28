@@ -1,3 +1,5 @@
+import { P } from "pino";
+
 const requiredEnv = (key) => {
     const value = process.env[key];
     if (!value) {
@@ -17,6 +19,7 @@ const config = {
     BCRYPT_SALT_ROUNDS: parseInt(process.env.BCRYPT_SALT_ROUNDS, 10) || 10,
     JWT_SECRET: process.env.JWT_SECRET,
     JWT_EXPIRES_SECONDS: process.env.JWT_EXPIRES_SECONDS,
+    DB_USE_SSL: process.env.DB_USE_SSL ?? false,
 }
 
 export default config;
