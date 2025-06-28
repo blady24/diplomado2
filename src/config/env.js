@@ -1,5 +1,3 @@
-import { P } from "pino";
-
 const requiredEnv = (key) => {
     const value = process.env[key];
     if (!value) {
